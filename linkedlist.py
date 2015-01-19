@@ -1,17 +1,22 @@
-import requests
-import string
+import pickle
 
-partial_u = 'http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing='
-nothing = '8022'
+s = '''<html>
+<head>
+  <title>peak hell</title>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<center>
+<img src="peakhell.jpg"/>
+<br><font color="#c0c0ff">
+pronounce it
+<br>
+<peakhell src="banner.p"/>
+</body>
+</html>
 
-i = 0
+<!-- peak hell sounds familiar ? -->'''
 
-while( i < 400 ):
-    u = partial_u + nothing
-    r = requests.get(u)
-    print r.text.encode('ascii', 'ignore')
-    new_nothing = r.text.encode('ascii', 'ignore').split()[-1]
-    #print new_nothing
-    nothing = new_nothing
-    i += 1
-    
+picklestring = pickle.dumps(s)
+
+banner = 
