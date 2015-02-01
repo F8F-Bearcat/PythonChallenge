@@ -1,0 +1,38 @@
+>>> import requests
+>>> r = requests.get('http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=12345')
+>>> r.text
+u'and the next nothing is 44827'
+>>> type(r.text)
+<type 'unicode'>
+>>> split(r.text)
+
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    split(r.text)
+NameError: name 'split' is not defined
+>>> import string
+>>> split(r.text)
+
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    split(r.text)
+NameError: name 'split' is not defined
+>>> r.text.split()
+[u'and', u'the', u'next', u'nothing', u'is', u'44827']
+>>> r.text.encode('ascii', 'ignore')
+'and the next nothing is 44827'
+>>> r.text.encode('ascii', 'ignore').split()
+['and', 'the', 'next', 'nothing', 'is', '44827']
+>>> l = r.text.encode('ascii', 'ignore').split()
+>>> l
+['and', 'the', 'next', 'nothing', 'is', '44827']
+>>> l[-1]
+'44827'
+>>> p = 'http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=12345'
+>>> p[::-5]
+'5=thine/elo./h'
+>>> p[:-5:]
+'http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing='
+>>> p[:-5:]+l[-1]
+'http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=44827'
+>>> 

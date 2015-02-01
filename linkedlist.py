@@ -1,0 +1,22 @@
+import pickle
+
+s = '''<html>
+<head>
+  <title>peak hell</title>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<center>
+<img src="peakhell.jpg"/>
+<br><font color="#c0c0ff">
+pronounce it
+<br>
+<peakhell src="banner.p"/>
+</body>
+</html>
+
+<!-- peak hell sounds familiar ? -->'''
+
+picklestring = pickle.dumps(s)
+
+banner = 
