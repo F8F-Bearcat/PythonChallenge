@@ -11,7 +11,8 @@ def home():
 
 @route('/<filename:path>')
 def send_static(filename):
-    ''' a bit of documentation
+    ''' This makes the extant template start working
+        Woo-Hoo!
     '''
     return static_file(filename, root='static/')
 
