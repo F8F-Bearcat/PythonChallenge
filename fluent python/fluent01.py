@@ -1,14 +1,50 @@
 from collections import namedtuple as nt
 from collections import deque as dq
+import time
+import datetime
 
 Months = nt('Months', 'month year')
 
 month_q = dq('Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split())
-
 print month_q
-
 curr_mo = month_q.pop()
-
 month_q.appendleft(curr_mo)
-
 print  month_q
+t = (2000, 1, 21, 1, 2, 3, 4, 5, 6)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+t = (2000, 2, 21, 1, 2, 3, 4, 5, 6)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+t = (2000, 3, 21, 1, 2, 3, 4, 5, 6)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+t = (2000, 4, 21, 1, 2, 3, 4, 5, 6)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+t = (2000, 5, 21, 1, 2, 3, 4, 5, 6)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+t = (2000, 6, 21, 1, 2, 3, 4, 5, 6)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+t = (2000, 7, 21, 1, 2, 3, 4, 5, 6)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+t = (2000, 8, 21, 1, 2, 3, 4, 5, 6)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+t = (2000, 9, 21, 1, 2, 3, 4, 5, 6)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+t = (2000, 10, 21, 1, 2, 3, 4, 5, 6)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+t = (2000, 11, 21, 1, 2, 3, 4, 5, 6)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+t = (2000, 12, 21, 1, 2, 3, 4, 5, 6)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+today = datetime.datetime.now()
+print today.strftime('%b')
