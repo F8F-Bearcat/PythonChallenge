@@ -3,13 +3,18 @@ from collections import deque as dq
 import time
 import datetime
 
-Months = nt('Months', 'month year')
+Months = nt('month', 'year')
 
 month_q = dq('Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split())
 print month_q
 curr_mo = month_q.pop()
 month_q.appendleft(curr_mo)
-print  month_q
+print month_q
+month_l = list('Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split())
+print month_l
+mo = month_l.pop()
+month_l.insert(0, mo)
+print month_l
 t = (2000, 1, 21, 1, 2, 3, 4, 5, 6)
 t = time.mktime(t)
 print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
