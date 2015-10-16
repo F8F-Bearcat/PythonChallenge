@@ -4,17 +4,27 @@ import time
 import datetime
 
 Months = nt('month', 'year')
-
 month_q = dq('Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split())
-print month_q
 curr_mo = month_q.pop()
 month_q.appendleft(curr_mo)
-print month_q
 month_l = list('Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split())
 print month_l
-mo = month_l.pop()
-month_l.insert(0, mo)
+
+today = datetime.datetime.now()
+curr_mo = today.strftime('%b')
+mo = ''
+while(mo != curr_mo):
+    mo = month_l.pop()
+    month_l.insert(0, mo)
+
 print month_l
+
+LastThree = month_l[9:12]
+LastOne = month_l[-1:]
+
+print 'LastThree are ', LastThree
+print 'LastOne is ', LastOne
+
 t = (2000, 1, 21, 1, 2, 3, 4, 5, 6)
 t = time.mktime(t)
 print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
@@ -51,5 +61,4 @@ print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
 t = (2000, 12, 21, 1, 2, 3, 4, 5, 6)
 t = time.mktime(t)
 print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
-today = datetime.datetime.now()
-print today.strftime('%b')
+
