@@ -269,7 +269,7 @@ p.box-desc
 {
 	font-size: 17px;
 	font-weight: 600;
-	color: #fff;
+	color: rgb(50,50,50);
 	font-family: 'Raleway', sans-serif;
 	line-height: 50px;
 	margin-top: 20px;
