@@ -19,7 +19,7 @@ def send_static(filename):
     ''' This makes the extant template start working
         Woo-Hoo!
     '''
-    return static_file(filename, root='static/')
+    return static_file(filename, root='static/')  
 
 @route('/hello')
 def hello():
@@ -35,4 +35,4 @@ def hello():
 
 
 
-run(host='0.0.0.0', port=8080)
+run(host='0.0.0.0', port=8080, debug=True)
