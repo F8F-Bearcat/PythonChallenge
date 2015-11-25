@@ -1,0 +1,14 @@
+import datetime
+
+start = datetime.time()
+
+i = 0
+while(i < 1000):
+    h = 37**7 + 37**6 + 37**5 + 37**4 + 37**3 + 37**2 + 37 
+
+end = datetime.time()
+
+print type(start)
+print start
+print end
+print end-start
