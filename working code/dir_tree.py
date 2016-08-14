@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, time
 from stat import *
 
 def walktree(top, callback):
@@ -18,13 +18,18 @@ def walktree(top, callback):
 
 def visitfile(file, mode):
     print 'visiting', file
-    print str(mode)
+    print time.ctime(os.stat(file).st_atime)
+    print time.ctime(os.stat(file).st_mtime)
+    print time.ctime(os.stat(file).st_ctime)
+    print os.stat(file).st_size
+    print os.stat(file).st_mode
 
 '''
 if __name__ == '__main__':
     walktree(sys.argv[1], visitfile)
 '''
 
-dt_file = 'C:\Customers'
+#dt_file = 'C:\Customers'
+dt_file = 'C:\Program Files'
 
 walktree(dt_file, visitfile)
